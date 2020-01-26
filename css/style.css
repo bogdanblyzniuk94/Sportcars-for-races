@@ -1,0 +1,319 @@
+:root{
+	box-sizing: border-box;
+	font-size: calc(1vw + 0.6em);
+}
+
+body{
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+/*******************************************
+************* ССЫЛКИ ***********************
+*******************************************/
+a:link{
+	color: #1476bb;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:visited{
+	color: #1414bb;
+}
+a:hover{
+	text-decoration: underline;
+}
+a:active{
+	color: #b45514;
+}
+/*******************************************
+************* ШАПКА ************************
+*******************************************/
+header{
+	padding: 0.5em 1em;
+	background: #fff;
+}
+
+.title > h1 {
+	color: #333;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	margin: 0.25em 0; 
+}
+.slogan{
+	color: #888;
+	font-size: 0.8em;
+	margin: 0;
+}
+
+/*******************************************
+************* ASIDE ************************
+*******************************************/
+
+.hero{
+	padding: 0;
+	margin: 0;
+	text-align: justify;
+	color: #fff;
+}
+.hero-image > img{
+	margin: 0 auto;
+	text-align: center;
+}
+
+/*******************************************
+************* MAIN *************************
+*******************************************/
+
+main{
+	margin: 0px 20px;
+	padding: 1.2em;
+	background: radial-gradient(rgb(245, 130, 130), rgb(236, 35, 35));
+}
+
+.subtitle{
+	margin-top: 1.2em;
+	margin-bottom: 1.2em;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+/*******************************************
+************* MENU *************************
+*******************************************/
+
+.menu{
+	position: relative;
+	z-index: 1;
+}
+.menu-toggle{
+	position: absolute;
+	top: -1.2em;
+	right: 0em;
+	border: 0;
+	background-color: transparent;
+	font-size: 3.1em;
+	width: 1em;
+	height: 1em;
+	line-height: 0.3em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 5em;
+}
+.menu-toggle::after{
+	position: absolute;
+	top: 0.4em;
+	left: 0.1em;
+	display: block;
+	content: "\2261";
+	text-indent: 0;
+}
+.menu-dropbox{
+	display: none;
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin: 0;
+}
+.menu.is-open .menu-dropbox{
+	display: block;
+}
+.nav-menu{
+	margin: 0;
+	padding: 0;
+	border: 1px solid #ccc;
+	background: #000;
+	color: #fff;
+}
+.nav-menu > li + li{
+	border-top: 1px solid #ccc;
+}
+.nav-menu > li > a{
+	display: block;
+	padding: 0.7em 1em;
+	color: #fff;
+	font-weight: normal;
+}
+@media (min-width: 560px){
+	.title > h1{
+		font-size: 2.2rem;
+	}
+	.menu-toggle{
+		display: none;
+	}
+	.menu-dropbox{
+		display: block;
+		position: static;
+	}
+	.nav-menu{
+		display: flex;
+		border: 0;
+		padding: 0 1em;
+		list-style-type: none;
+	}
+	.nav-menu > li{
+		flex: 1;
+	}
+	.nav-menu > li + li{
+		border: 0;
+	}
+	.nav-menu > li > a{
+		padding: 0.4em;
+		text-align: center;
+	}
+	.row{
+		display: flex;
+		
+	}
+	.column{
+		flex: 1;
+		margin-left: 0.75em;
+		margin-right: 0.75em;
+	}
+}
+
+@media (min-width: 35em) {
+	.hero{
+		padding: 2em 3em;
+		font-size: 1.2rem;
+	}
+}
+
+@media (min-width: 50em) {
+	.page-header{
+		padding: 1.2em 4em;
+	}
+	.main{
+		padding: 2em 4em;
+	}
+	:root{
+		font-size: 1.2em;
+	}
+}
+
+/*******************************************
+************* SELECT CAR *******************
+*******************************************/
+#select-car{
+	margin-top: 30px;
+}
+.select-cars{
+	text-align: center;
+}
+.select-cars > h2 > a{
+	text-decoration: none;
+	color: #000;
+}
+.select-cars > h2 > a:hover{
+	text-decoration: none;
+	color: rgb(236, 35, 35);
+}
+
+/*******************************************
+************* WE OFFER *********************
+*******************************************/
+#we-offer{
+	background: radial-gradient(rgb(245, 130, 130), rgb(236, 35, 35));
+	margin: 0px 20px;
+	padding: 5px 0px;
+}
+#we-offer > .row > .column{
+	margin: 0px 10px 40px 10px;
+}
+#we-offer > .row > .column > h2{
+	text-align: center;
+}
+#we-offer > .row > .column {
+	text-align: center;
+	margin: 0px 10px;
+}
+#we-offer > .row > .column > h3{
+	margin-top: 0;
+	text-align: center;
+}
+
+/*******************************************
+************* OUR ACHIEVEMENTS *************
+*******************************************/
+
+#our-achievements > .row > .column > h2 {
+	text-align: center;
+}
+#our-achievements > .row > .achievements {
+	margin: 30px 10px;
+	text-align: center;
+	font-size: 30px;
+}
+#our-achievements > .row > .column > .count {
+	color: rgb(236, 35, 35);
+	font-weight: bold;
+}
+
+/*******************************************
+************* RECALL ***********************
+*******************************************/
+#recall > .row > .column > h2 {
+	text-align: center;
+	margin: 15px 10px;
+	font-size: 25px;
+}
+
+#recall > .row > .column > form {
+	margin: 15px 0px;
+	text-align: center;
+}
+
+.subform label{
+	display: inline-block;
+	width: 170px;
+	vertical-align: top;
+	text-align: left;
+	margin-right: 0px;
+	font-weight: bold;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 20px;
+}
+
+#recall > .row > .column > .subform > p > .text {
+	width: 170px;
+	height: 20px;
+	border-radius: 4px;
+}
+
+.subform input[type="submit"]{
+	padding: 12px 24px;
+	font-size: 1em;
+	background: rgb(236, 35, 35);
+	cursor: pointer;
+	border-radius: 4px;
+	color: #fff;
+	border: none;
+}
+
+/*******************************************
+************* MAP **************************
+*******************************************/
+#our-contacts{
+	background: radial-gradient(rgb(245, 130, 130), rgb(236, 35, 35));
+	margin: 0px 20px;
+	padding: 5px 0px;
+}
+
+#our-contacts > .row > .column > #map{
+	margin: 20px 10px;
+	text-align: center;
+	height: 450px;
+	width: 96%;
+}
+
+#our-contacts > .row > .contacts{
+	text-align: center;
+	margin-top: 40px;
+}
+
+/*******************************************
+************* FOOTER ***********************
+*******************************************/
+footer{
+	background-color: #000;
+	color: #fff;
+	padding: 5px 10px 5px 10px;
+}
